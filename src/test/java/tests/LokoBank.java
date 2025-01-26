@@ -50,28 +50,37 @@ public class LokoBank extends TestBase {
     @Tag("Loko")
     @ParameterizedTest(name = "Проверка наличия кнопок {0}")
     void checkAtributeOfMenuOnSuchLanguage(List<String> expectedButtons) {
-        step("Open form", () -> {
+        step("Open source", () -> {
         open("https://www.lockobank.ru");
         });
+        step("Check menu", () -> {
         $("#header").$$("p").shouldHave(texts(expectedButtons));
+        });
     }
 
     @Tag("Loko")
     @DisplayName("Проверка просмотра файла инструкции")
     @Test
     void pdfFileParsingTest() throws Exception {
-
+        step("Open source", () -> {
             open("/apps");
+        });
+        step("Download file and check it", () -> {
+
             File downloaded = $("[href='https://www.lockobank.ru/cms/prod/Android_Ru_Store_Instrukcziya_dlya_klientov_po_ustanovke_mobilnogo_prilozheniya_0a508e9be2.pdf']").download();
             PDF pdf = new PDF(downloaded);
             Assertions.assertEquals(3, pdf.numberOfPages);
-
+        });
     }
     @DisplayName("Проверка таблицы Тарифы страхования")
     @Tag("Loko")
     @Test
     void checkTableOfTariff() throws Exception {
-        open("/personal/strakhovanie/strakhovanie-imushchestva/");
+
+        step("Open source", () -> {
+            open("/personal/strakhovanie/strakhovanie-imushchestva/");
+        });
+        step("Check table of tariff", () -> {
         $(byTagAndText("th", "Конструктивные элементы")).sibling(0).shouldHave(text("250 000"));
         $(byTagAndText("th", "Инженерные сети и оборудования, внутренняя отделка (всего)")).sibling(0).shouldHave(text("50 000"));
         $(byTagAndText("th", "Инженерные сети")).sibling(0).shouldHave(text("37%"));
@@ -81,7 +90,7 @@ public class LokoBank extends TestBase {
         $(byTagAndText("th", "Общая страховая сумма")).sibling(0).shouldHave(text("580 000"));
         $(byTagAndText("th", "Стоимость 1 год")).sibling(0).shouldHave(text("6 000"));
         $(byTagAndText("th", "Стоимость 2 года")).sibling(0).shouldHave(text("12 000"));
-
+        });
     }
 
 
