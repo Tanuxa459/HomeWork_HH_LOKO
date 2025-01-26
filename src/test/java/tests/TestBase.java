@@ -11,12 +11,11 @@ public class TestBase {
 
         Configuration.baseUrl = "https://www.lockobank.ru";
         Configuration.pageLoadStrategy = "eager";
-
-//        String remoteHost = System.getProperty("remoteHost", "host");
-//        Configuration.remote = "https://user1:1234@" + remoteHost + "/wd/hub";
-//        Configuration.browser = System.getProperty("browser", "chrome");
-//        Configuration.browserVersion = System.getProperty("browserVersion", "114");
-//        Configuration.browserSize = System.getProperty("browserSize", "1920×1080");
+        String remoteHost = System.getProperty("remoteHost", "host");
+        Configuration.remote = "https://user1:1234@" + remoteHost + "/wd/hub";
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "114");
+        Configuration.browserSize = System.getProperty("browserSize", "1920×1080");
 
     }
 
