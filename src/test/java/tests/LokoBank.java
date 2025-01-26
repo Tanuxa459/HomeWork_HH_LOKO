@@ -21,6 +21,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.files.DownloadActions.click;
+import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 
 public class LokoBank extends TestBase {
@@ -49,7 +50,9 @@ public class LokoBank extends TestBase {
     @Tag("Loko")
     @ParameterizedTest(name = "Проверка наличия кнопок {0}")
     void checkAtributeOfMenuOnSuchLanguage(List<String> expectedButtons) {
+        step("Open form", () -> {
         open("https://www.lockobank.ru");
+        });
         $("#header").$$("p").shouldHave(texts(expectedButtons));
     }
 
@@ -64,6 +67,7 @@ public class LokoBank extends TestBase {
             Assertions.assertEquals(3, pdf.numberOfPages);
 
     }
+    @DisplayName("Проверка таблицы Тарифы страхования")
     @Tag("Loko")
     @Test
     void checkTableOfTariff() throws Exception {
