@@ -62,15 +62,12 @@ public class LokoBank extends TestBase {
     @DisplayName("Проверка просмотра файла инструкции")
     @Test
     void pdfFileParsingTest() throws Exception {
-        step("Open source", () -> {
+
             open("/apps");
-        });
-        step("Download file and check it", () -> {
 
             File downloaded = $("[href='https://www.lockobank.ru/cms/prod/Android_Ru_Store_Instrukcziya_dlya_klientov_po_ustanovke_mobilnogo_prilozheniya_0a508e9be2.pdf']").download();
             PDF pdf = new PDF(downloaded);
             Assertions.assertEquals(3, pdf.numberOfPages);
-        });
     }
     @DisplayName("Проверка таблицы Тарифы страхования")
     @Tag("Loko")
