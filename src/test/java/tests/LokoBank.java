@@ -72,7 +72,7 @@ public class LokoBank extends TestBase {
     @DisplayName("Проверка таблицы Тарифы страхования")
     @Tag("Loko")
     @Test
-    void checkTableOfTariff() throws Exception {
+    void checkTableOfTariff () {
 
         step("Open source", () -> {
             open("/personal/strakhovanie/strakhovanie-imushchestva/");
@@ -89,8 +89,34 @@ public class LokoBank extends TestBase {
         $(byTagAndText("th", "Стоимость 2 года")).sibling(0).shouldHave(text("12 000"));
         });
     }
+    @DisplayName("Проверка наличия заголовка на страниуе Privat-banking")
+    @Tag("Loko")
+    @Test
+    void checkTitleOfPrivateBankingPage() {
 
+        step("Open source", () -> {
+            open("/private-banking/");
+        });
+        step("Check title of private-banking page", () -> {
+            $(byTagAndText("h1", "Персональный подход для самых требовательных клиентов")).shouldBe(visible);
+        });
+    }
 
+    static Stream<Arguments> checkAtributeOfMenuOnEnLanguage() {
+        return Stream.of(
+                Arguments.of(List.of("PRODUCTS & SERVICES", "CORPORATE PROFILE", "CORPORATE GOVERNANCE", "INVESTOR RELATIONS", "Сorporate profile", "Private Banking", "Corporate Governance", "Investor Relations", "Products services", "Retail banking", "SME", "Financial institutions")));
+    }
+    @MethodSource
+    @Tag("Loko")
+    @ParameterizedTest(name = "Проверка dкладок на английском языке кнопок")
+    void checkAtributeOfMenuOnEnLanguage(List<String> expectedButtons) {
+        step("Open source", () -> {
+            open("/en");
+        });
+        step("Check menu", () -> {
+            $("header").$$("p").shouldHave(texts(expectedButtons));
+        });
+    }
 
 
 
