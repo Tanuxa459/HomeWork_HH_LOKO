@@ -1,0 +1,20 @@
+{
+  "base": {
+    "logo": "",
+    "project": "MyProject",
+    "environment": "",
+    "comment": "",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "build/allure-report/",
+    "enableChart": false,
+    "enableSuitesPublishing": false,
+    "customData": {}
+  },
+  "telegram": {
+    "token": "8080264245:AAHFF-79JNQy0sGxWf4bS7YoCsjJRAWI1lU",
+    "chat": "-1002426775189",
+    "replyTo": "",
+    "templatePath": "/templates/telegram.ftl"
+  }
+}
