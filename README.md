@@ -114,6 +114,10 @@ ____
 <img title="Allure TestOps Dashboard" src="images/screen/testops.png" width="850">  
 </p>  
 
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="images/screen/testops_number.png" width="850">  
+</p> 
+
 ___
 <a id="jira"></a>
 ## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-682">Jira</a>
