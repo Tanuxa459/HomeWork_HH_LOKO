@@ -48,7 +48,7 @@ public class LokoBank extends TestBase {
     }
     @MethodSource
     @Tag("Loko")
-    @ParameterizedTest(name = "Проверка наличия кнопок {0}")
+    @ParameterizedTest(name = "Проверка наличия вкладок на русском языке {0}")
     void checkAtributeOfMenuOnSuchLanguage(List<String> expectedButtons) {
         step("Open source", () -> {
         open("https://www.lockobank.ru");
@@ -89,7 +89,7 @@ public class LokoBank extends TestBase {
         $(byTagAndText("th", "Стоимость 2 года")).sibling(0).shouldHave(text("12 000"));
         });
     }
-    @DisplayName("Проверка наличия заголовка на страниуе Privat-banking")
+    @DisplayName("Проверка наличия заголовка на странице Privat-banking")
     @Tag("Loko")
     @Test
     void checkTitleOfPrivateBankingPage() {
@@ -108,7 +108,7 @@ public class LokoBank extends TestBase {
     }
     @MethodSource
     @Tag("Loko")
-    @ParameterizedTest(name = "Проверка dкладок на английском языке кнопок")
+    @ParameterizedTest(name = "Проверка  вкладок на английском языке {0}")
     void checkAtributeOfMenuOnEnLanguage(List<String> expectedButtons) {
         step("Open source", () -> {
             open("/en");
