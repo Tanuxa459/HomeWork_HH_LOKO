@@ -25,35 +25,31 @@ ____
 ## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
 
 <p align="center">  
-<a href="https://www.jetbrains.com/idea/"><Img src="images/logo/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>  
-<a href="https://www.java.com/"><img src="Images/logo/Java.svg" width="50" height="50"  alt="Java"/></a>  
-<a href="https://github.com/"><img src="Images/logo/Github.svg" width="50" height="50"  alt="Github"/></a>  
-<a href="https://junit.org/junit5/"><Img src="images/logo/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>  
-<a href="https://gradle.org/"><img src="Images/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>  
-<a href="https://selenide.org/"><img src="Images/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>  
-<a href="https://aerokube.com/selenoid/"><Img src="images/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>  
-<a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="Images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a> 
-<a href="https://qameta.io/"><img src="Images/logo/Allure2.svg" width="50" height="50"  alt="Allure TestOps"/></a>   
-<a href="https://www.jenkins.io/"><img src="Images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>  
-<a href="https://www.atlassian.com/ru/software/jira/"><img src="Images/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
+<a href="https://www.jetbrains.com/idea/"><img src="images/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>  
+<a href="https://www.java.com/"><img src="images/Java.svg" width="50" height="50"  alt="Java"/></a>  
+<a href="https://github.com/"><img src="images/Github.svg" width="50" height="50"  alt="Github"/></a>  
+<a href="https://junit.org/junit5/"><img src="images/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>  
+<a href="https://gradle.org/"><img src="images/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>  
+<a href="https://selenide.org/"><img src="images/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>  
+<a href="https://aerokube.com/selenoid/"><img src="images/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>  
+<a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="images/Allure.svg" width="50" height="50"  alt="Allure"/></a> 
+<a href="https://qameta.io/"><img src="images/Allure2.svg" width="50" height="50"  alt="Allure TestOps"/></a>   
+<a href="https://www.jenkins.io/"><img src="images/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>   
 </p>
 
 ____
 <a id="cases"></a>
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
 ____
-- ✓ *Проверка полей таблицы с Тарифами по страхованию*
-- ✓ *Проверка меню на английском языке*
-- ✓ *Проверка меня на русском языке*
-- ✓ *Проверка названия раздела на странице Private-banking*
-- ✓ *Проверка формы 'Обратная связь'*
-- ✓ *Проверка формы подписки на рассылку новостей*
-- ✓ *Поиск несуществующей строки в разделе 'Компания'*
-
+-  *Проверка полей таблицы с Тарифами по страхованию*
+-  *Проверка меню на английском языке*
+-  *Проверка меня на русском языке*
+-  *Проверка названия раздела на странице Private-banking*
+-  *Проверка файла инструкции инструкции*
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
@@ -65,7 +61,6 @@ ____
 - *browser (браузер, по умолчанию chrome)*
 - *browserVersion (версия браузера, по умолчанию 100.0)*
 - *browserSize (размер окна браузера, по умолчанию 1920x1080)*
-- *baseUrl (адрес тестируемого веб-сайта)*
 - *remoteUrl (логин, пароль и адрес удаленного сервера Selenoid)*
 
 <a id="console"></a>
@@ -73,21 +68,21 @@ ____
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean X5Group_test
+gradle clean Loko_test
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean X5Group_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DbaseUrl=${baseUrl}"
-"-DremoteUrl=${remoteUrl}"
+clean
+Loko_test
+"-DremoteHost=${REMOTEHOST}"
+"-Dbrowser=${BROWSER}"
+"-DbrowserVersion=${VERSION_BROWSER}"
+"-DbrowserSize=${BROWSER_SIZE}"
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
+## <img alt="Allure" height="25" src="images/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
@@ -142,7 +137,7 @@ ____
 
 ____
 <a id="telegram"></a>
-## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+## <img alt="Allure" height="25" src="images/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
 <p align="center">  
 <img title="Allure Overview Dashboard" src="images/screen/telegram.png" width="550">  
