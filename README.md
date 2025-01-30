@@ -82,13 +82,13 @@ Loko_test
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
+## <img alt="Allure" height="25" src="images/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/032-TKI308-jenkins-FastProject/11/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/jenkins.png" width="850">  
+<img title="Allure Overview Dashboard" src="images/screen/allure.png" width="850">  
 </p>  
 
 ### *Тест-кейсы*
