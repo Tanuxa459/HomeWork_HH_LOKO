@@ -61,7 +61,6 @@ ____
 - *browser (браузер, по умолчанию chrome)*
 - *browserVersion (версия браузера, по умолчанию 100.0)*
 - *browserSize (размер окна браузера, по умолчанию 1920x1080)*
-- *baseUrl (адрес тестируемого веб-сайта)*
 - *remoteUrl (логин, пароль и адрес удаленного сервера Selenoid)*
 
 <a id="console"></a>
@@ -83,7 +82,7 @@ Loko_test
 ```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
+## <img alt="Allure" height="25" src="images/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/allure/)</a>
 ___
 
 ### *Основная страница отчёта*
@@ -138,7 +137,7 @@ ____
 
 ____
 <a id="telegram"></a>
-## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+## <img alt="Allure" height="25" src="images/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
 <p align="center">  
 <img title="Allure Overview Dashboard" src="images/screen/telegram.png" width="550">  
