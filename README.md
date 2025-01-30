@@ -99,8 +99,8 @@ ___
 
 ### *Графики*
 
-  <p align="center">  
-<img title="Allure Graphics" src="images/screen/graph.bmp" width="850">
+<p align="center">  
+<img title="Allure Graphics" src="images/screen/graph.png" width="850">
  
 </p>
 
