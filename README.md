@@ -1,6 +1,6 @@
-# Проект по автоматизации тестирования для компании [ЛОКО банк](https://www.x5.ru/ru/)
+# Проект по автоматизации тестирования для компании [ЛОКО банк](https://www.lockobank.ru/about/)
 
-> Локо банк — банк для пердприниматей и .
+> Локо банк — Универсальный коммерческий банк с 30-летним опытом.
 
 ## **Содержание:**
 ____
@@ -49,10 +49,10 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/032-TKI308-jenkins-FastProject/)</a>
 ____
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/job/032-TKI308-jenkins-FastProject/)/"><img src="images/screen/jenkins.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
