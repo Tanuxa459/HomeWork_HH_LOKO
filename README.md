@@ -108,23 +108,11 @@ ___
 <a id="allure-testops"></a>
 ## <img alt="Allure" height="25" src="images/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2197/dashboards">Allure TestOps</a>
 ____
-### *Allure TestOps Dashboard*
+### *Allure TestOps просмотр запусков Jenkins*
 
 <p align="center">  
-<img title="Allure TestOps Dashboard" src="images/screen/allure_overview.png" width="850">  
+<img title="Allure TestOps Dashboard" src="images/screen/testops.png" width="850">  
 </p>  
-
-### *Ручные тест-кейсы*
-
-<p align="center">  
-<img title="Allure Tests" src="images/screen/manual_tests.png" width="850">  
-</p>
-
-### *Авто тест-кейсы*
-
-<p align="center">  
-<img title="Allure TestOps Tests" src="images/screen/allure_autotestsN.png" width="850">  
-</p>
 
 ___
 <a id="jira"></a>
