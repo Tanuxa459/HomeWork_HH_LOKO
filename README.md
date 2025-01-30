@@ -94,20 +94,19 @@ ___
 ### *Тест-кейсы*
 
 <p align="center">  
-<img title="Allure Tests" src="images/screen/jenkins_tests.png" width="850">  
+<img title="Allure Tests" src="images/screen/allure_test.png" width="850">  
 </p>
 
 ### *Графики*
 
-  <p align="center">  
-<img title="Allure Graphics" src="images/screen/allure_graths.bmp" width="850">
-
-<img title="Allure Graphics" src="images/screen/graphs.png" width="850">  
+<p align="center">  
+<img title="Allure Graphics" src="images/screen/graph.png" width="850">
+ 
 </p>
 
 ___
 <a id="allure-testops"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2197/dashboards">Allure TestOps</a>
+## <img alt="Allure" height="25" src="images/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2197/dashboards">Allure TestOps</a>
 ____
 ### *Allure TestOps Dashboard*
 
