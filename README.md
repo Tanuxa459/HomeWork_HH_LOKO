@@ -94,15 +94,14 @@ ___
 ### *Тест-кейсы*
 
 <p align="center">  
-<img title="Allure Tests" src="images/screen/jenkins_tests.png" width="850">  
+<img title="Allure Tests" src="images/screen/allure_test.png" width="850">  
 </p>
 
 ### *Графики*
 
   <p align="center">  
-<img title="Allure Graphics" src="images/screen/allure_graths.bmp" width="850">
-
-<img title="Allure Graphics" src="images/screen/graphs.png" width="850">  
+<img title="Allure Graphics" src="images/screen/graph.bmp" width="850">
+ 
 </p>
 
 ___
