@@ -102,6 +102,7 @@ public class LokoBank extends TestBase {
         });
     }
 
+
     static Stream<Arguments> checkAtributeOfMenuOnEnLanguage() {
         return Stream.of(
                 Arguments.of(List.of("PRODUCTS & SERVICES", "CORPORATE PROFILE", "CORPORATE GOVERNANCE", "INVESTOR RELATIONS", "Сorporate profile", "Private Banking", "Corporate Governance", "Investor Relations", "Products services", "Retail banking", "SME", "Financial institutions")));
