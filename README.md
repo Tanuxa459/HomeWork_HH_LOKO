@@ -111,11 +111,11 @@ ____
 ### *Allure TestOps просмотр запусков Jenkins*
 
 <p align="center">  
-<img title="Allure TestOps Dashboard" src="images/screen/testops.png" width="850">  
+<img title="Allure TestOps Dashboard" src="images/screen/testops_number.png" width="850">  
 </p>  
 
 <p align="center">  
-<img title="Allure TestOps Dashboard" src="images/screen/testops_number.png" width="850">  
+<img title="Allure TestOps Dashboard" src="images/screen/testops.png" width="850">  
 </p> 
 
 ___
