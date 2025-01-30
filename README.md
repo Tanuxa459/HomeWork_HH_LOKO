@@ -49,7 +49,7 @@ ____
 
 ____
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
+## <img alt="Jenkins" height="25" src="images/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/)</a>
 ____
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/Kod3ik_qa_guru_x5/"><img src="images/screen/jenkins_build.png" alt="Jenkins" width="950"/></a>  
@@ -69,17 +69,17 @@ ____
 ___
 ***Локальный запуск:***
 ```bash  
-gradle clean X5Group_test
+gradle clean Loko_test
 ```
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean X5Group_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DbaseUrl=${baseUrl}"
-"-DremoteUrl=${remoteUrl}"
+clean
+Loko_test
+"-DremoteHost=${REMOTEHOST}"
+"-Dbrowser=${BROWSER}"
+"-DbrowserVersion=${VERSION_BROWSER}"
+"-DbrowserSize=${BROWSER_SIZE}"
 ```
 ___
 <a id="allure"></a>
