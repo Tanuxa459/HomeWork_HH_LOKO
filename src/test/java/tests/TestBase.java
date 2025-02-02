@@ -12,12 +12,6 @@ import java.util.Map;
 
 public class TestBase {
 
-    @BeforeEach
-    void listebnerSetup(){
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
-
-
     @BeforeAll
     static void setup() {
 
@@ -28,7 +22,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "114");
         Configuration.browserSize = System.getProperty("browserSize", "1920×1080");
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

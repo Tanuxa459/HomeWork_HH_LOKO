@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -23,12 +24,15 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.files.DownloadActions.click;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
-
+@Tag("Loko")
 public class LokoBank extends TestBase {
 
-
     @BeforeEach
-    void listebner(){
+    void closeWebdriver(){
+        Selenide.closeWebDriver();
+    }
+    @BeforeEach
+    void listenerAdd(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
@@ -47,18 +51,16 @@ public class LokoBank extends TestBase {
                         "Для частных лиц","Для юридических лиц")));
     }
     @MethodSource
-    @Tag("Loko")
     @ParameterizedTest(name = "Проверка наличия вкладок на русском языке {0}")
     void checkAtributeOfMenuOnSuchLanguage(List<String> expectedButtons) {
-        step("Open source", () -> {
+        step("Открытие сайта", () -> {
         open("https://www.lockobank.ru");
         });
-        step("Check menu", () -> {
+        step("Проверка пунктов меню на русском языке", () -> {
         $("#header").$$("p").shouldHave(texts(expectedButtons));
         });
     }
 
-    @Tag("Loko")
     @DisplayName("Проверка просмотра файла инструкции")
     @Test
     void pdfFileParsingTest() throws Exception {
@@ -70,14 +72,13 @@ public class LokoBank extends TestBase {
             Assertions.assertEquals(3, pdf.numberOfPages);
     }
     @DisplayName("Проверка таблицы Тарифы страхования")
-    @Tag("Loko")
     @Test
-    void checkTableOfTariff () {
+    void checkTableOfTariffTest() {
 
-        step("Open source", () -> {
+        step("Открытие сайта", () -> {
             open("/personal/strakhovanie/strakhovanie-imushchestva/");
         });
-        step("Check table of tariff", () -> {
+        step("Проверка таблицы страхования", () -> {
         $(byTagAndText("th", "Конструктивные элементы")).sibling(0).shouldHave(text("250 000"));
         $(byTagAndText("th", "Инженерные сети и оборудования, внутренняя отделка (всего)")).sibling(0).shouldHave(text("50 000"));
         $(byTagAndText("th", "Инженерные сети")).sibling(0).shouldHave(text("37%"));
@@ -89,15 +90,14 @@ public class LokoBank extends TestBase {
         $(byTagAndText("th", "Стоимость 2 года")).sibling(0).shouldHave(text("12 000"));
         });
     }
-    @DisplayName("Проверка наличия заголовка на странице Privat-banking")
-    @Tag("Loko")
+    @DisplayName("Проверка наличия заголовка на странице Privatе-banking")
     @Test
     void checkTitleOfPrivateBankingPage() {
 
-        step("Open source", () -> {
+        step("Открытие страницы сайта Private-banking", () -> {
             open("/private-banking/");
         });
-        step("Check title of private-banking page", () -> {
+        step("Проверка заголовка на страницы Private-banking", () -> {
             $(byTagAndText("h1", "Персональный подход для самых требовательных клиентов")).shouldBe(visible);
         });
     }
@@ -108,13 +108,12 @@ public class LokoBank extends TestBase {
                 Arguments.of(List.of("PRODUCTS & SERVICES", "CORPORATE PROFILE", "CORPORATE GOVERNANCE", "INVESTOR RELATIONS", "Сorporate profile", "Private Banking", "Corporate Governance", "Investor Relations", "Products services", "Retail banking", "SME", "Financial institutions")));
     }
     @MethodSource
-    @Tag("Loko")
-    @ParameterizedTest(name = "Проверка  вкладок на английском языке {0}")
+    @ParameterizedTest(name = "Проверка  вкладок на английском языке")
     void checkAtributeOfMenuOnEnLanguage(List<String> expectedButtons) {
-        step("Open source", () -> {
+        step("Открытие сайта", () -> {
             open("/en");
         });
-        step("Check menu", () -> {
+        step("Проверка пунктов меню на английском меню", () -> {
             $("header").$$("p").shouldHave(texts(expectedButtons));
         });
     }
