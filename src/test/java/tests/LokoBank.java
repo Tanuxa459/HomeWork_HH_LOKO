@@ -64,6 +64,7 @@ public class LokoBank extends TestBase {
         step("Открытие сайта", () -> {
             open("/personal/strakhovanie/strakhovanie-imushchestva/");
         });
+        $(byText("Тарифы")).click();
         step("Проверка таблицы страхования", () -> {
             $(byTagAndText("th", "Конструктивные элементы")).sibling(0).shouldHave(text("250 000"));
             $(byTagAndText("th", "Инженерные сети и оборудования, внутренняя отделка (всего)")).sibling(0).shouldHave(text("50 000"));
