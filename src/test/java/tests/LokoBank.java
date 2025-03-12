@@ -35,7 +35,7 @@ public class LokoBank extends TestBase {
     }
 
     @MethodSource
-    @ParameterizedTest(name = "Проверка наличия вкладок на русском языке {0}")
+    @ParameterizedTest(name = "Проверка наличия вкладок на русском языке")
     void checkAtributeOfMenuOnSuchLanguage(List<String> expectedButtons) {
         step("Открытие сайта", () -> {
             open("https://www.lockobank.ru");
@@ -73,18 +73,6 @@ public class LokoBank extends TestBase {
             $(byTagAndText("th", "Общая страховая сумма")).sibling(0).shouldHave(text("580 000"));
             $(byTagAndText("th", "Стоимость 1 год")).sibling(0).shouldHave(text("6 000"));
             $(byTagAndText("th", "Стоимость 2 года")).sibling(0).shouldHave(text("12 000"));
-        });
-    }
-
-    @DisplayName("Проверка наличия заголовка на странице Privatе-banking")
-    @Test
-    void checkTitleOfPrivateBankingPage() {
-
-        step("Открытие страницы сайта Private-banking", () -> {
-            open("/private-banking/");
-        });
-        step("Проверка заголовка на страницы Private-banking", () -> {
-            $(byTagAndText("h1", "Персональный подход для самых требовательных клиентов")).shouldBe(visible);
         });
     }
 

@@ -19,10 +19,7 @@ public class TestBase {
     void listenerAdd(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
-    @BeforeEach
-    void closeWebdriver(){
-        Selenide.closeWebDriver();
-    }
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
@@ -31,17 +28,21 @@ public class TestBase {
         Attach.addVideo();
 
     }
+    @AfterEach
+    void closeWebdriver(){
+        Selenide.closeWebDriver();
+    }
 
     @BeforeAll
     static void setup() {
 
         Configuration.baseUrl = "https://www.lockobank.ru";
         Configuration.pageLoadStrategy = "eager";
-        String remoteHost = System.getProperty("remoteHost", "host");
-        Configuration.remote = "https://user1:1234@" + remoteHost + "/wd/hub";
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "114");
-        Configuration.browserSize = System.getProperty("browserSize", "1920×1080");
+//        String remoteHost = System.getProperty("remoteHost", "host");
+//        Configuration.remote = "https://user1:1234@" + remoteHost + "/wd/hub";
+//        Configuration.browser = System.getProperty("browser", "chrome");
+//        Configuration.browserVersion = System.getProperty("browserVersion", "114");
+//        Configuration.browserSize = System.getProperty("browserSize", "1920×1080");
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
