@@ -22,8 +22,8 @@ public class MainPage {
     @Step("Открытие главной страницы")
     public MainPage openPage() {
         open("");
-        executeJavaScript("$('.topBanner').remove()");
-        //executeJavaScript("window.scrollBy(2300,2300)");
+        //executeJavaScript("$('.topBanner').remove()");
+        executeJavaScript("window.scrollBy(2300,2300)");
         return this;
     }
 
