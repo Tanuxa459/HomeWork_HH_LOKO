@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
-@Tag("Loko")
+
 public class LokoBankPageObject extends TestBase {
 
 

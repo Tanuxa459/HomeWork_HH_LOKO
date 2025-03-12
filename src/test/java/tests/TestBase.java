@@ -27,11 +27,11 @@ public class TestBase {
         Attach.browserConsoleLogs();
         Attach.addVideo();
 
-    }
-//    @AfterEach
-//    void closeWebdriver(){
-//        Selenide.closeWebDriver();
 //    }
+////    @AfterEach
+////    void closeWebdriver(){
+////        Selenide.closeWebDriver();
+////    }
 
     @BeforeAll
     static void setup() {
