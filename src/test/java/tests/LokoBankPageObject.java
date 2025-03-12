@@ -19,6 +19,7 @@ public class LokoBankPageObject extends TestBase {
     void checkFormForCredit() {
         MainPage mainPage = new MainPage();
         mainPage.openPage()
+                .switchToFormIframe()
                 .setFullNameInput("Пупсиков Иван Петрович")
                 .setPhoneInput("+7(495) 515-11-11")
                 .setBirthDayInput("02.02.1987");

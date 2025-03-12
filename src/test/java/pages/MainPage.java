@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
@@ -21,9 +22,14 @@ public class MainPage {
 
     @Step("Открытие главной страницы")
     public MainPage openPage() {
-        open("");
-        //executeJavaScript("$('.topBanner').remove()");
-        executeJavaScript("window.scrollBy(2300,2300)");
+        open("/personal/kredit/nalichnymi/#form");
+
+        return this;
+    }
+
+    @Step("Переключиться на iframe")
+    public MainPage switchToFormIframe() {
+        switchTo().frame("iFrame1");
         return this;
     }
 
