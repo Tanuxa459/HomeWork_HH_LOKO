@@ -15,6 +15,7 @@ import com.codeborne.pdftest.PDF;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pages.MainPage;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
@@ -91,6 +92,20 @@ public class LokoBank extends TestBase {
         step("Проверка пунктов меню на английском меню", () -> {
             $("header").$$("p").shouldHave(texts(expectedButtons));
         });
+    }
+
+    @Test
+    void checkFormForCredit() {
+        MainPage mainPage = new MainPage();
+        mainPage.openPage()
+                .switchToFormIframe()
+                .setFullNameInput("Пупсиков Иван Петрович")
+                .setPhoneInput("+7(495) 515-11-11")
+                .setBirthDayInput("02.02.1987");
+
+//        step("", () -> {
+//
+//        });
     }
 
 

@@ -16,19 +16,19 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 public class LokoBankPageObject extends TestBase {
 
 
-    @Test
-    void checkFormForCredit() {
-        MainPage mainPage = new MainPage();
-        mainPage.openPage()
-                .switchToFormIframe()
-                .setFullNameInput("Пупсиков Иван Петрович")
-                .setPhoneInput("+7(495) 515-11-11")
-                .setBirthDayInput("02.02.1987");
-
-        step("Проверка пунктов меню на английском меню", () -> {
-
-        });
-    }
+//    @Test
+//    void checkFormForCredit() {
+//        MainPage mainPage = new MainPage();
+//        mainPage.openPage()
+//                .switchToFormIframe()
+//                .setFullNameInput("Пупсиков Иван Петрович")
+//                .setPhoneInput("+7(495) 515-11-11")
+//                .setBirthDayInput("02.02.1987");
+//
+//        step("Проверка пунктов меню на английском меню", () -> {
+//
+//        });
+//    }
 
 
 }
