@@ -14,7 +14,7 @@ import static com.codeborne.selenide.logevents.SelenideLogger.step;
 
 public class LokoBankPageObject extends TestBase {
 
-    @Tag("Loko_test")
+    @Tag("Loko")
     @Test
     void checkFormForCredit() {
         MainPage mainPage = new MainPage();
